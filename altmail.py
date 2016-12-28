@@ -21,8 +21,11 @@ def realnames(aliases, alias):
     return names
 
 def forwardof(name):
-    with open('/home/%s/.forward' % name, 'r') as f:
-        return f.read().strip()
+    try:
+        with open('/home/%s/.forward' % name, 'r') as f:
+            return f.read().strip()
+    except IOError:
+        return ""
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
