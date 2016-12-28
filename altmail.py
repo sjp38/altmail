@@ -4,12 +4,15 @@ import sys
 
 def parse_aliases():
     aliases = {}
-    with open('/etc/aliases', 'r') as f:
-        for line in f:
-            spltd = line.split(':')
-            if len(spltd) < 2:
-                continue
-            aliases[spltd[0]] = spltd[1].split()
+    try:
+        with open('/etc/aliases', 'r') as f:
+            for line in f:
+                spltd = line.split(':')
+                if len(spltd) < 2:
+                    continue
+                aliases[spltd[0]] = spltd[1].split()
+    except IOError:
+        pass
     return aliases
 
 def realnames(aliases, alias):
