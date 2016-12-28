@@ -29,7 +29,7 @@ def forwardof(name):
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
-        print "USAGE: %s <mail id>" % sys.argv[0]
+        print "USAGE: %s <username or mailing list name>" % sys.argv[0]
         exit(1)
 
     mailid = sys.argv[1]
