@@ -1,7 +1,8 @@
 altmail
 =======
 
-Find alternative mail address for a user or members of a mailing list group.
+Find alternative mail address(es) for a user or members of a mailing list
+group.
 
 
 Usage
