@@ -4,6 +4,11 @@ altmail
 Find alternative mail address(es) for a user or members of a mailing list
 group.
 
+In case of mail server crash, finding alternative mail addresses of members is
+inconvenient.  `altmail` helps finding out such alternative mail addresses.  It
+uses `/etc/aliases` and `.forward` file under home directory to find out the
+addresses.
+
 
 Usage
 =====
